@@ -1,0 +1,86 @@
+$pinkcolor: #f55f8d;
+$h1color: #262626;
+$textcolor: #636363;
+
+@mixin maincolor {
+    background-image: linear-gradient(to right,#f55f8d 0,#f8ae56 51%,#f55f8d 100%);
+    background-size: 200%;
+}
+
+@mixin before {
+    background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 100%);
+}
+// Box Shadows right - slider Start
+@mixin shadowsright {
+    left: 0;
+    background: linear-gradient(to right,#fff 0,rgba(255,255,255,0) 100%);
+    width: 30px;
+    top: 0;
+    height: 100%;
+    z-index: 2;
+}
+// Box Shadows right - slider end
+
+
+
+// Box Shadows left - slider Start
+
+@mixin shadowsleft {
+    height: 100%;
+    top: 0;
+    width: 30px;
+    right: 0;
+    background: linear-gradient(to left,#fff 0,rgba(255,255,255,0) 100%);
+    z-index: 2;
+}
+// Box Shadows left - slider end
+
+
+
+// Before and After - slider_pic
+// START
+@mixin pointhead__before {
+    background-color: $pinkcolor;
+    border-radius: 50px;
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    height: 15px;
+    width: 15px;
+    bottom: 30px;
+}
+
+@mixin poinfooter__after {
+    background-color: $pinkcolor;
+    border-radius: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    height: 10px;
+    width: 10px;
+    bottom: 30px;
+}
+
+// END
+
+
+
+
+// .pic__down - before start
+@mixin pic_down__before {
+    left: 0;
+    bottom: 0;
+    background-image: url(./../image/aaaaa.png);
+    background-position: bottom;
+    background-size: 100%;
+    background-color: $pinkcolor;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: all 1s;
+}
+// .pic__down - before end

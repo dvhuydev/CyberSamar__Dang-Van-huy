@@ -1,0 +1,199 @@
+@import "variables";
+
+
+
+.slider{
+    width: 100%;
+    height: auto;
+    background-image: url(./../image/slider.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 30px;
+    padding-top: 120px;
+    .slider__container{
+        width: 1200px;
+        margin: auto;
+        text-align: center;
+        .slider__title{
+            color: $h1color;
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 1.1;
+
+            h2{
+                color: $pinkcolor;
+            }
+            h1{
+                margin: 20px 0;
+                font-size: 70px;
+            }
+        }
+
+        .slider__content{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            padding: 50px 0;
+    
+            .swiper-pagination-bullet{
+                background-color: $pinkcolor;
+            }
+
+            .swiper-button-next{
+                color: $pinkcolor;
+            }
+
+            .swiper-button-prev{
+                color: $pinkcolor;
+            }
+            
+            .slider__thumbs{
+                width: 330px;
+                margin: auto;
+                box-sizing: border-box;
+                height: 250px;
+                position: relative;
+                overflow: hidden;
+                // margin-bottom: 40px;
+    
+                &::before{
+                    position: absolute;
+                    content: '';
+                    @include shadowsright;
+                }
+    
+                &::after{
+                    position: absolute;
+                    content: '';
+                    @include shadowsleft;
+                }
+                
+    
+                // ACTIVE START
+                .swiper-slide-thumb-active{
+                    .slider__pic{
+                        padding: 0 0 70px;
+                        transition: all 0.5s ease;
+                        &::before{
+                            top: 50%;
+                            opacity: 1;
+                            transition: all 0.5s ease;
+                        }
+                        &::after{
+                            top: 70%;
+                            opacity: 1;
+                            transition: all 0.5s ease;
+                        }
+                        & .pic__down{
+                            opacity: 1;
+                            transition: all 0.5s ease;
+                        }
+                    }
+                }
+                // ACTIVE END
+    
+    
+                .slider__pic{
+                    width: auto;
+                    height: 100%;
+                    cursor: pointer;
+                    position: relative;
+                    padding: 50px 0 0;
+                    transition: all 0.5s;
+    
+                    &::before{
+                        content: "";
+                        @include pointhead__before;
+    
+                    }
+    
+                    &::after{
+                        content: "";
+                        @include poinfooter__after
+                    }
+    
+                    .pic__down{
+                        position: relative;
+                        height: 40px;
+                        width: 40px;
+                        line-height: 40px;
+                        left: 50%;
+                        top: 10;
+                        transform: translateX(-50%);
+                        z-index: -100;
+                        // top: 0;
+                        opacity: 0;
+                        bottom: 22px;
+                    
+                        
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            @include pic_down__before;
+                        }
+                    }  
+                    img{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        // border: #f55f8d;
+                        padding: 4px;
+                        position: relative;
+                        // z-index: 2;
+                        background-color: $pinkcolor;
+                    }
+                }
+    
+            }
+    
+            .slider__content{
+                min-height: 300px;
+                width: 100%;
+                .slider__text{
+                    text-align: center;
+                    margin: 20px 100px;
+                    padding: 30px;
+                    margin: auto;
+                    box-shadow: 0 20px 30px 0 rgb(0 0 0 / 10%);
+                    border-radius: 20px;
+                    background: #fff;
+                    max-width: 800px;
+                    position: relative;
+                    i{
+                        position: absolute;
+                        font-size: 100px;
+                        top: 10px;
+                        left: 30px;
+                        color: $pinkcolor;
+                    }
+                    h3{
+                        font-size: 25px;
+                        font-weight: 800;
+                        color: $h1color;
+                        line-height: 25px;
+                        margin-bottom: 5px;
+                    }
+                    h4{
+                        font-style: italic;
+                        color: $pinkcolor;
+                        font-size: 25px;
+                        margin-top: 15px;
+                        font-weight: 800;
+                        line-height: 25px;
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        font-style: italic;
+                        color: $textcolor;
+                        font-size: 22px;
+                        margin-top: 40px;
+                        line-height: 1.5;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

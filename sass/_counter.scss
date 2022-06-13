@@ -1,0 +1,45 @@
+@import "variables";
+
+
+.counterUp{
+    width: 100%;
+    height: auto;
+    background-image: url(./../image/counter.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 50px 0 120px;
+    padding: 50px 0 50px 0;
+    .counter__container{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        .counter__items{
+            width: 25%;
+            i{
+                font-size: 45px;
+                @include maincolor;
+                color: #fff;
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+            h1{
+                font-size: 70px;
+                color: $pinkcolor;
+                line-height: 1;
+                font-weight: 800;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 22px;
+                color: $textcolor;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

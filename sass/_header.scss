@@ -1,0 +1,87 @@
+@import "variables";
+
+.header{
+    width: 100%;
+    height: 15vh;
+    position: absolute;
+    .header__container{
+        width: 1200px;
+        margin: auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+
+        .logo{
+            cursor: pointer;
+        }
+        
+        .header__nav{
+            display: flex;
+            text-transform: capitalize;
+            align-items: center;
+            
+            li{
+                margin-right: 30px;
+                cursor: pointer;
+                font-size: 16.5px;
+                position: relative;
+                // line-height: 120px;
+                transition: all;
+
+                span{
+                    font-weight: 600;
+                    display: inline-block;
+                    height: 100%;
+                    // transition: all .5s ease;
+
+                }
+                i{
+                    align-items: center;
+                    // margin-left: 10px;
+                    font-size: 10px;
+                }
+                &:hover{
+                    color: $pinkcolor;
+                    // transition: all ease;
+                }
+
+                &:hover span{
+                    animation: UptoDown 0.3s
+                }
+
+                @keyframes UptoDown {
+                    49% {
+                        transform: translateY(100%);
+                    }
+                    50%{
+                        transform: translateY(-100%);
+                    }
+                    
+                }
+            }
+            .nav__button{
+                // margin-left: 20px;
+                padding: 20px 35px;
+                @include maincolor;
+                border-radius: 30px;
+                text-transform: uppercase;
+                color: #fff;
+                letter-spacing: 1px;
+                font-size: 15px;
+                font-weight: 500px;
+                border: 2px solid transparent;
+                cursor: pointer;
+                line-height: 1.5;
+                
+
+                &:hover{
+                    background-position: right;
+                    // transition: all .5s ease;
+                }
+            }
+        }
+    }
+}

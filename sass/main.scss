@@ -1,0 +1,34 @@
+@import "header";
+@import "carousel";
+@import "services";
+@import "about";
+@import "counter";
+@import "features";
+@import "portfolio";
+@import "plan";
+@import "slider";
+@import "ourblog";
+@import "footer";
+@import "backtotop";
+
+*{
+    // font-family: ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    // text-transform: capitalize;
+    transition: all .5s ease;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: relative;
+}

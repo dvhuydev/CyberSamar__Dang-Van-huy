@@ -1,0 +1,99 @@
+@import "variables";
+
+.about{
+    width: 100%;
+    height: auto;
+    background-image: url(./../image/bg15.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center right;
+    padding-top: 120px;
+    .about__container{
+        width: 1200px;
+        margin: auto;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        .about__image{
+            width: 50%;
+            img{
+                width: 710px;
+                text-align: center;
+                height: 475px;
+                border-radius: 0 100px 100px 0;
+                margin-left: -27%;
+                cursor: pointer;
+            }
+        }
+
+        .about__content{
+            width: 50%;
+            margin-left: 3%;
+            h2{
+                text-transform: capitalize;
+                color: $pinkcolor;
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+            h1{
+                color: $h1color;
+                font-size: 70px;
+                text-transform: capitalize;
+                line-height: 1.1;
+                margin-bottom: 20px;
+            }
+            p{
+                color: $textcolor;
+                margin-bottom: 15px;
+                font-size: 17px;
+                line-height: 1.5;
+            }
+
+            .about__title{
+                color: $textcolor;
+                div{
+                    margin: 20px 0;
+                    align-items: center;
+                    font-size: 17px;
+
+                    i{
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        color: $pinkcolor;
+                        border: 2px solid $pinkcolor;
+                        border-radius: 50%;
+                        text-align: center;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .about__button{
+                margin-top: 40px;
+                padding: 20px 35px;
+                @include maincolor;
+                border-radius: 30px;
+                text-transform: uppercase;
+                color: #fff;
+                letter-spacing: 1px;
+                font-size: 15px;
+                border: 2px solid transparent;
+                cursor: pointer;
+                line-height: 1.5;
+                text-align: center;
+                font-size: 17px;
+                font-weight: 500;
+                width: 35%;
+                
+
+                &:hover{
+                    background-position: right;
+                    // transition: all .5s ease;
+                }
+            }
+        }
+    }
+}

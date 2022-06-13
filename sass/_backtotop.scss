@@ -1,0 +1,39 @@
+@import "variables";
+
+
+.backtotop{
+    // width: 1200px;
+    width: 100%;
+    height: 100%;
+    background-color: #1f343b;
+    .backtotop__container{
+        // margin-top: 30px;
+        // padding-top: 50px;
+        // position: relative;
+        // background: #1f343b;
+        width: 1200px;   
+        height: auto;
+        margin: auto;
+        i{
+            position: fixed;
+            // float: right;
+            right: 30px;
+            bottom: 10px;
+            font-size: 40px;
+            width: 60px;
+            height: 65px;
+            cursor: pointer;
+            // @include maincolor;
+            color: #fff;
+            background: $pinkcolor;
+            border-radius: 15px;
+            line-height: 65px;
+            text-align: center;
+            // opacity: 0.3;
+            // transition: all .3s ease;
+        }
+        // &:hover i{
+        //     opacity: 1;
+        // }
+    }
+}
