@@ -76,18 +76,19 @@
                     @include maincolor;
                     border-radius: 30px;
                     text-transform: uppercase;
-                    color: #fff;
-                    letter-spacing: 1px;
                     font-size: 15px;
                     border: 2px solid transparent;
                     cursor: pointer;
                     line-height: 1.5;
-                    // display: inline-block;
                     text-align: center;
                     font-size: 16px;
                     font-weight: 500;
                     width: 35%;
-                    
+                    transition: all .3s ease;
+                    a{
+                        color: #fff;
+                        letter-spacing: 1px;
+                    }
     
                     &:hover{
                         background-position: right;

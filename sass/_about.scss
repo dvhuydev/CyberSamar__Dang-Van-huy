@@ -77,7 +77,6 @@
                 @include maincolor;
                 border-radius: 30px;
                 text-transform: uppercase;
-                color: #fff;
                 letter-spacing: 1px;
                 font-size: 15px;
                 border: 2px solid transparent;
@@ -87,6 +86,11 @@
                 font-size: 17px;
                 font-weight: 500;
                 width: 35%;
+                transition: all .5s ease;
+
+                a{
+                    color: #fff;
+                }
                 
 
                 &:hover{

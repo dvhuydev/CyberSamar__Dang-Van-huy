@@ -31,6 +31,10 @@
                 // line-height: 120px;
                 transition: all;
 
+                a{
+                    color: #000;
+                }
+
                 span{
                     font-weight: 600;
                     display: inline-block;
@@ -63,18 +67,19 @@
                 }
             }
             .nav__button{
-                // margin-left: 20px;
                 padding: 20px 35px;
                 @include maincolor;
                 border-radius: 30px;
                 text-transform: uppercase;
-                color: #fff;
-                letter-spacing: 1px;
                 font-size: 15px;
-                font-weight: 500px;
                 border: 2px solid transparent;
                 cursor: pointer;
                 line-height: 1.5;
+                a{
+                    color: #fff;
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                }
                 
 
                 &:hover{

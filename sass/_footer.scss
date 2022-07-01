@@ -231,7 +231,9 @@
                 color: #fff;
                 display: inline-block;
                 span{
-                    color: $pinkcolor;
+                    a{
+                        color: $pinkcolor;
+                    }
                 }
             }
             .footer__right{
